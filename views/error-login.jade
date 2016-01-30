@@ -1,0 +1,21 @@
+
+
+extends layout
+
+block content
+	#login-container
+		form( method="post")#login-form.well.span4
+			h1 Jargon Signup
+			p.subheading.alert.alert-danger Error: Please enter your email address and a password to create your Jargon account.
+			//label Username 
+			input(type="text", name="user", id='user-tf', placeholder='Username').span4.required
+			//label Password
+			input(type="password", name="pass", id='pass-tf', placeholder='Password').span4.required
+			input(type="password", name="pass", id='pass-tf', placeholder='Retype password').span4.required
+			button(type="submit")#btn-login.btn.btn-primary
+				i.icon-lock.icon-white
+				| Sign in
+			label#remember-me.checkbox Remember Me
+				input(type="checkbox", checked='checked')
+			div.clear-fix
+			hr
